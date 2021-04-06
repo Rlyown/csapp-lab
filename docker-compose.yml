@@ -1,0 +1,13 @@
+version: '2.2'
+
+services:
+  dev_host:
+    container_name: dev_host
+    image: ubuntu:dev.16.04
+    # docker build -t ubuntu:dev.16.04 .
+    build: .
+    ports: 
+      - 36000:36000
+    volumes:
+      - .:/home/bingo/Workdir
+    privileged: true
